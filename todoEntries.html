@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> To-Do — PenDown </title>
+  <link rel="stylesheet" href="todoEntries.css">
+  <script src="storage.js"></script>
+  <script src="layout.js"></script>
+  <script src="todoEntries.js"></script>
+</head>
+
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-body">
+
+    <aside class="sidebar" id="sidebar">
+      
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"> <img src="building.png" class="sidebar-icon"> Home </a>
+        <a href="journalEntries.html" class="sidebar-link"> <img src="open-book (1).png"  class="sidebar-icon"> Journal </a>
+        <a href="todoEntries.html" class="sidebar-link"> <img src="list.png"  class="sidebar-icon"> To-Do </a>
+        <a href="pinned.html" class="sidebar-link"> <img src="pin.png" class="sidebar-icon"> Pinned </a>
+        <a href="profile.html" class="sidebar-link"> <img src="user (1).png"  class="sidebar-icon"> Profile </a>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+
+      <header class="topbar">
+        <div class="topbar-left">
+            <img src="diary.png" class="logo-icon">
+            <span> <b> PenDown </b></span>
+          </a>
+        </div>
+        <a href="profile.html" class="topbar-right">
+          <span class="topbar-username" id="topbarUsername"> User </span>
+          
+        </a>
+      </header>
+
+      <main class="page-content">
+
+        <div class="page-header">
+          <h1> Your To-Do List </h1>
+          <p> Small steps, one task at a time </p>
+        </div>
+
+        <button class="btn btn-primary toggle-form-btn" id="showFormBtn"> + New Task </button>
+
+        <section class="form-card" id="taskFormCard" style="display: none;">
+          <h3 id="formTitle"> Add a new task </h3>
+          <form id="taskForm">
+            <input type="hidden" id="taskIdField">
+
+            <div class="form-group">
+              <label for="taskTitleField"> Task title </label>
+              <input type="text" id="taskTitleField" placeholder="Complete project report">
+            </div>
+
+            <div class="form-group">
+              <label for="taskDescField"> Description (optional) </label>
+              <textarea id="taskDescField" placeholder="Add any extra details..."></textarea>
+            </div>
+
+            <div class="form-card-actions">
+              <button type="submit" class="btn btn-primary" id="saveTaskBtn"> Save Task </button>
+              <button type="button" class="btn btn-outline" id="cancelTaskBtn"> Cancel </button>
+            </div>
+          </form>
+        </section>
+
+        <section>
+          <div id="taskListContainer"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toastBox"></div>
+
+  
+</body>
+</html>

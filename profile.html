@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Profile — PenDown </title>
+  <link rel="stylesheet" href="profile.css">
+  <script src="storage.js"></script>
+  <script src="layout.js"></script>
+  <script src="profile.js"></script>
+</head>
+
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-body">
+
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"> <img src="building.png" class="sidebar-icon"> Home </a>
+        <a href="journalEntries.html" class="sidebar-link"> <img src="open-book (1).png" class="sidebar-icon"> Journal </a>
+        <a href="todoEntries.html" class="sidebar-link"> <img src="list.png" class="sidebar-icon"> To-Do </a>
+        <a href="pinned.html" class="sidebar-link"> <img src="pin.png" class="sidebar-icon"> Pinned </a>
+        <a href="profile.html" class="sidebar-link"> <img src="user (1).png" class="sidebar-icon"> Profile </a>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+
+      <header class="topbar">
+        <div class="topbar-left">
+            <img src="diary.png" class="logo-icon">
+            <span> <b> PenDown </b></span>
+          </a>
+        </div>
+        <a href="profile.html" class="topbar-right">
+          <span class="topbar-username" id="topbarUsername"> User </span>
+          
+        </a>
+      </header>
+
+      <main class="page-content">
+
+        <div class="page-header">
+          <h1> Your Profile </h1>
+          <p> Manage your information and how PenDown looks for you </p>
+        </div>
+
+        <!-- Profile info card -->
+        <section class="profile-card">
+
+          <form class="profile-form" id="profileForm">
+
+            <div class="form-group">
+              <label for="profileUsernameField"> Username </label>
+              <input type="text" id="profileUsernameField">
+            </div>
+
+            <div class="form-group">
+              <label for="profileEmailField">Email</label>
+              <input type="email" id="profileEmailField" disabled>
+            </div>
+
+            <p class="form-message" id="profileMessage"></p>
+            
+            <button type="submit" class="btn btn-primary btn-full"> Save Changes </button>
+
+          </form>
+        </section>
+
+        <!-- Theme settings -->
+        <section class="theme-toggle-row">
+
+          <div class="label-group">
+            <h4> Dark Mode </h4>
+          </div>
+
+          <div class="theme-switch" id="themeSwitch">
+          <div class="theme-switch-knob">
+            <img src="sun.png" id="themeIcon" alt="Light mode">
+          </div>
+        </div>
+
+        </section>
+
+        <!-- Logout -->
+        <button class="btn btn-outline btn-full" id="logoutBtn">Logout</button>
+
+        <!--delete account -->
+        <section class="danger-zone">
+          <h4> Delete Account </h4>
+          <p> This will permanently remove your account, journal entries, and tasks. This cannot be undone. </p>
+          <button class="btn btn-danger btn-full" id="deleteAccountBtn"> Delete My Account </button>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toastBox"></div>
+
+  
+</body>
+</html>

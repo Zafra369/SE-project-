@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Register — PenDown </title>
+  <link rel="stylesheet" href="register.css">
+  <script src="storage.js"></script>
+  <script src="register.js"></script>
+</head>
+
+<body>
+
+  <div class="auth-page">
+    <div class="auth-box">
+      <a href="home.html" class="auth-logo">
+        <img src="diary.png" class="logo-icon">
+        PenDown
+      </a>
+      <h1> Create your account </h1>
+
+      <form id="registerForm" novalidate>
+
+        <div class="form-group">
+          <label for="registerUsername"> Username </label>
+          <input type="text" id="registerUsername" placeholder="Choose a username">
+        </div>
+
+        <div class="form-group">
+          <label for="registerEmail"> Email </label>
+          <input type="email" id="registerEmail" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+        <label for="registerPassword"> Password </label>
+        <input type="password" id="registerPassword" placeholder="Create a password">
+        <img src="close-eye.png" class="password-toggle" data-target="registerPassword">
+      </div>
+
+      <div class="form-group">
+        <label for="registerConfirmPassword"> Confirm password </label>
+        <input type="password" id="registerConfirmPassword" placeholder="Type your password again">
+        <img src="close-eye.png" class="password-toggle" data-target="registerConfirmPassword">
+      </div>
+
+        <p class="form-message" id="registerMessage"></p>
+
+        <button type="submit" class="btn btn-primary btn-full"> Register </button>
+      </form>
+
+      <p class="auth-footer-text"> Already have an account? <a href="login.html"> Login here </a></p>
+    </div>
+  </div>
+
+</body>
+</html>

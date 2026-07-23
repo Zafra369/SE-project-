@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body 
+{
+  font-family: 'Inter', sans-serif;
+  background-color: #fbf3e9;
+  color: #4a3b32;
+  line-height: 1.6;
+}
+
+h1 
+{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: #4a3b32;
+}
+
+a 
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn 
+{
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary 
+{
+  background-color: #c97b63;
+  color: #fffdf9;
+  box-shadow: 0 4px 20px rgba(74, 59, 50, 0.08);
+}
+
+.btn-primary:hover 
+{
+  background-color: #b0644d;
+  box-shadow: 0 8px 30px rgba(74, 59, 50, 0.14);
+  transform: translateY(-2px);
+}
+
+.btn-full 
+{
+  width: 100%;
+}
+.auth-page 
+{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fbf3e9;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201, 123, 99, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(138, 155, 110, 0.12), transparent 40%);
+}
+
+/* Register box  */
+.auth-box 
+{
+  width: 100%;
+  max-width: 440px;
+  padding: 44px 40px;
+  border-radius: 24px;
+  background-color: #fffdf9;
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  box-shadow: 0 8px 30px rgba(74, 59, 50, 0.14);
+}
+
+.auth-logo 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4a3b32;
+}
+
+.logo-icon 
+{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.auth-box h1 
+{
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+
+
+/*Form fields  */
+.form-group 
+{
+  margin-bottom: 18px;
+  position: relative;
+}
+.form-group label 
+{
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #4a3b32;
+  position: relative;
+}
+
+.password-toggle 
+{
+  position: absolute;
+  right: 14px;
+  top: 38px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-group input 
+{
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(74, 59, 50, 0.12);
+  background-color: #fffdf9;
+  color: #4a3b32;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-message 
+{
+  font-size: 0.85rem;
+  margin-top: -6px;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.form-message.show
+ {
+  display: block;
+}
+
+.form-message.success
+ {
+  color: #2f7a4f;
+}
+
+.form-message.error 
+{
+  color: #b4483c;
+}
+
+.form-group input:focus
+{
+  outline: none;
+  border-color: #c97b63;
+  box-shadow: 0 0 0 4px rgba(201, 123, 99, 0.14);
+}
+
+.form-error 
+{
+  color: #b4483c;
+  font-size: 0.82rem;
+  margin-top: -6px;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.form-error.show 
+{
+  display: block;
+}
+
+.auth-footer-text 
+{
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #8a7a6d;
+}
+
+.auth-footer-text a 
+{
+  color: #c97b63;
+  font-weight: 600;
+}
+
+
+@media (max-width: 640px) 
+{
+  .auth-box 
+  {
+    padding: 34px 24px;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Journal — PenDown </title>
+  <link rel="stylesheet" href="journalEntries.css">
+  <script src="storage.js"></script>
+  <script src="layout.js"></script>
+  <script src="journalEntries.js"></script>
+</head>
+
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-body">
+
+    <aside class="sidebar" id="sidebar">
+      
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"> <img src="building.png" alt="Home" class="sidebar-icon"> Home </a>
+        <a href="journalEntries.html" class="sidebar-link"> <img src="open-book (1).png" alt="Journal" class="sidebar-icon"> Journal </a>
+        <a href="todoEntries.html" class="sidebar-link"> <img src="list.png" alt="To-Do" class="sidebar-icon"> To-Do </a>
+        <a href="pinned.html" class="sidebar-link"> <img src="pin.png" alt="Pinned" class="sidebar-icon"> Pinned </a>
+        <a href="profile.html" class="sidebar-link"> <img src="user (1).png" alt="Profile" class="sidebar-icon"> Profile </a>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+
+      <header class="topbar">
+
+        <div class="topbar-left">
+            <img src="diary.png"  class="logo-icon">
+            <span> <b> PenDown </b></span>
+          </a>
+        </div>
+        
+        <a href="profile.html" class="topbar-right">
+          <span class="topbar-username" id="topbarUsername"> User </span>
+          
+        </a>
+      </header>
+
+      <main class="page-content">
+
+        <div class="page-header">
+          <h1> Your Journal </h1>
+          <p> A private place to write down your thoughts </p>
+        </div>
+
+        <button class="btn btn-primary toggle-form-btn" id="showFormBtn"> + New Entry </button>
+
+        <section class="form-card" id="entryFormCard" style="display: none;">
+          <h3 id="formTitle"> Write a new entry </h3>
+
+          <form id="entryForm">
+            <input type="hidden" id="entryIdField">
+
+            <div class="form-group">
+              <label for="entryTitleField"> Title </label>
+              <input type="text" id="entryTitleField" placeholder="My Best Day">
+            </div>
+
+            <div class="form-group">
+              <label for="entryContentField"> Content </label>
+              <textarea id="entryContentField" placeholder="Today was amazing because..."> </textarea>
+              <p class="word-count-hint"> <span id="liveWordCount"> 0 </span> words </p>
+            </div>
+
+            <div class="form-card-actions">
+              <button type="submit" class="btn btn-primary" id="saveEntryBtn"> Save Entry </button>
+              <button type="button" class="btn btn-outline" id="cancelEntryBtn"> Cancel </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="full-entry-card" id="fullEntryCard" style="display: none;">
+          <button type="button" class="btn btn-outline btn-small" id="backToListBtn"> ← Back to Journal </button>
+
+          <br><br>
+
+          <h2 class="full-entry-title" id="fullEntryTitle"></h2>
+
+          <div class="full-entry-meta">
+            <span id="fullEntryDate"></span>
+            <span id="fullEntryTime"></span>
+            <span id="fullEntryWords"></span>
+          </div>
+          
+          <p class="full-entry-body" id="fullEntryBody"></p>
+        </section>
+
+        <section id="entryListSection">
+          <div id="journalEntriesList"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toastBox"></div>
+
+  
+</body>
+</html>

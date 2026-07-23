@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Login — PenDown </title>
+  <link rel="stylesheet" href="login.css">
+  <script src="storage.js"></script>
+  <script src="login.js"></script>
+</head>
+
+<body>
+
+  <div class="auth-page">
+
+    <div class="auth-box">
+      <a href="home.html" class="auth-logo">
+        <img src="diary.png">
+        PenDown
+      </a>
+      <h1> Welcome back </h1>
+      <p class="auth-sub"> Your thoughts have been waiting for you </p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginUsername"> Username or email </label>
+          <input type="text" id="loginUsername" placeholder="e.g. Naruto Uzumaki">
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword"> Password </label>
+          <input type="password" id="loginPassword" placeholder="Enter your password">
+          <img src="close-eye.png" class="password-toggle" data-target="loginPassword">
+        </div>
+
+        <p class="form-message" id="loginMessage"></p>
+
+        <button type="submit" class="btn btn-primary btn-full"> Login </button>
+      </form>
+
+      <p class="auth-footer-text"> Don't have an account yet? <a href="register.html"> Register here </a></p>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
